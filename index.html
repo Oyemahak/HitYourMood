@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit Your Mood</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mood Selection -->
+    <div id="mood-selection">
+        <h1>Hit Your Mood</h1>
+        <p>Select Your Mood:</p>
+        <select id="mood">
+            <option value="happy">Happy 😊</option>
+            <option value="sad">Sad 😢</option>
+            <option value="angry">Angry 😠</option>
+            <option value="excited">Excited 😆</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="score">Score: 0</div>
+
+        <!-- Mobile Controls for Moving Paddle -->
+        <div id="controls">
+            <button id="left-btn">◀</button>
+            <button id="right-btn">▶</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

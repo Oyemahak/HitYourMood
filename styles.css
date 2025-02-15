@@ -1,0 +1,67 @@
+/* General Styling */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+}
+
+/* Mood Selection */
+#mood-selection {
+    margin-top: 50px;
+}
+
+/* Game Container */
+#game-container {
+    position: relative;
+    width: 90vw;
+    max-width: 600px;
+    height: 90vh;
+    max-height: 500px;
+    margin: auto;
+    border: 2px solid black;
+    background: #e0e0e0;
+    display: none;
+}
+
+/* Score Display */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Mobile Controls */
+#controls {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+#controls button {
+    font-size: 24px;
+    padding: 10px;
+    flex: 1;
+    cursor: pointer;
+}
+
+/* Mood-based Backgrounds */
+.happy { background-color: #ffe600; }
+.sad { background-color: #80d4ff; }
+.angry { background-color: #ff4d4d; }
+.excited { background-color: #ff9900; }
+
+/* Paddle Animation */
+.paddle-hit {
+    animation: hitEffect 0.2s ease;
+}
+
+@keyframes hitEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
