@@ -1,67 +1,80 @@
-/* General Styling */
+/* General Styles */
 body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
     margin: 0;
+    padding: 0;
+    background: #fff8c8;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    touch-action: none;
 }
 
-/* Mood Selection */
-#mood-selection {
-    margin-top: 50px;
+/* Game Header (Like Instagram) */
+#game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+/* Close Button */
+#close-btn {
+    font-size: 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Scoreboard */
+#scoreboard {
+    display: flex;
+    align-items: center;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.player img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.crown {
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 /* Game Container */
 #game-container {
-    position: relative;
-    width: 90vw;
-    max-width: 600px;
-    height: 90vh;
-    max-height: 500px;
-    margin: auto;
-    border: 2px solid black;
-    background: #e0e0e0;
-    display: none;
-}
-
-/* Score Display */
-#score {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Mobile Controls */
-#controls {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 10px;
     width: 100%;
+    height: 80%;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#controls button {
-    font-size: 24px;
-    padding: 10px;
-    flex: 1;
-    cursor: pointer;
+canvas {
+    width: 100%;
+    height: 100%;
 }
 
-/* Mood-based Backgrounds */
-.happy { background-color: #ffe600; }
-.sad { background-color: #80d4ff; }
-.angry { background-color: #ff4d4d; }
-.excited { background-color: #ff9900; }
-
-/* Paddle Animation */
-.paddle-hit {
-    animation: hitEffect 0.2s ease;
-}
-
-@keyframes hitEffect {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+/* Paddle (Rod) */
+#paddle {
+    position: absolute;
+    width: 120px;
+    height: 25px;
+    background: black;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
 }

@@ -8,31 +8,32 @@
 </head>
 <body>
 
-    <!-- Mood Selection -->
-    <div id="mood-selection">
-        <h1>Hit Your Mood</h1>
-        <p>Select Your Mood:</p>
-        <select id="mood">
-            <option value="happy">Happy 😊</option>
-            <option value="sad">Sad 😢</option>
-            <option value="angry">Angry 😠</option>
-            <option value="excited">Excited 😆</option>
-        </select>
-        <button onclick="startGame()">Start Game</button>
+    <!-- Game Header (Like Instagram) -->
+    <div id="game-header">
+        <button id="close-btn">✖</button>
+        <div id="scoreboard">
+            <div class="player">
+                <span class="crown">👑</span>
+                <img src="assets/images/player1.png" alt="Player 1">
+                <span id="player1-score">041</span>
+            </div>
+            <div class="player">
+                <img src="assets/images/player2.png" alt="Player 2">
+                <span id="player2-score">000</span>
+            </div>
+        </div>
     </div>
 
     <!-- Game Container -->
     <div id="game-container">
         <canvas id="gameCanvas"></canvas>
-        <div id="score">Score: 0</div>
-
-        <!-- Mobile Controls for Moving Paddle -->
-        <div id="controls">
-            <button id="left-btn">◀</button>
-            <button id="right-btn">▶</button>
-        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Paddle (Rod) -->
+    <div id="paddle"></div>
+
+    <script src="js/ui.js"></script>
+    <script src="js/physics.js"></script>
+    <script src="js/game.js"></script>
 </body>
 </html>
